@@ -1,0 +1,41 @@
+// main: ../main.less
+
+.other_inform {
+    position: relative;
+    margin: 7% 0;
+    background-color: #fff;
+   // width: 60%;
+    
+.openhide {
+    height: 250px;
+    overflow: hidden;
+    padding: 2em;
+    
+    
+    &:hover {
+        overflow-y: scroll;
+    }
+ }
+    
+    label {
+        position: absolute;
+        display: block;
+        bottom: 0; left: 0;right: 0;
+        background-color: #fff;
+        text-align: center;
+        cursor: pointer;
+        padding-top: 2em;
+       .gradient(transparent, #eee); 
+       
+        
+    }
+    
+    input {
+        display: none;
+        &:checked + .openhide {
+            height: auto;
+            overflow: auto;
+        }
+    }
+    
+}

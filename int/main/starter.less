@@ -1,0 +1,58 @@
+// main: main.less
+
+
+a {
+    .animation(0.4s);
+    color: @blue;
+    &:hover {color: @red;}
+    &:active {color: @linkactive;}
+    
+    &[href*='#'] {
+        text-decoration: none;
+        border-bottom: 1px dashed @blue;
+    }
+}
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid @lightgray;
+    margin: 2em 0;
+    padding: 0;
+}
+
+blockquote{
+ //   line-height:1.2em;
+
+    font-size:1em;
+    color:#000;
+    margin:2em auto;
+    padding:2em;
+
+    background-color: #fff;
+    box-shadow: 6px 6px 20px #ddd;
+
+    //  border:1px dotted #7f8c8d;
+
+    &.small{font-size:1.2em;}
+    p{margin:0; }
+}
+
+
+button {
+  .animation(0.4s)
+}
+
+
+body {
+    background-color: #eee;
+    font-family: @sans;
+}
+
+.block {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+}

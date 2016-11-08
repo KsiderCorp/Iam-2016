@@ -1,0 +1,81 @@
+// main: index.less
+
+.partners_block {
+    background-color: #ddd;
+    margin: 5% 0;
+    padding: 2% 0;
+    
+    position: relative;
+/*    color: #fff;*/
+   
+       
+    .partner_flex {
+        
+        &:hover .partners_link {opacity: 0.6;}
+        padding: 5% 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        
+        -ms-align-items: stretch;
+        align-items: stretch;
+        
+        -webkit-justify-content: space-around;
+        -moz-justify-content: space-around;
+        -ms-justify-content: space-around;
+        -o-justify-content: space-around;
+        justify-content: space-around;
+        
+        justify-content: center;
+        
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+        
+        .partners_link {
+         position: relative;   
+         width: 12.5%; padding-top: 12.5%;
+         text-indent: -9999px;
+         line-height: 0; 
+         .animation(0.5s);
+       
+        &:hover {opacity: 1;}  
+            
+            
+a {
+        position: absolute;
+        left: 1em; bottom: 1em;
+        top: 1em;  right: 1em;
+        
+        background-size: contain;
+             
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+         
+             &.ras {background-image:url("@{logotypes}/ras.svg");}
+             &.msu {background-image:url("@{logotypes}/msu.jpg");}
+             &.mipt {background-image:url("@{logotypes}/mipt.svg");}
+             &.tsagy {background-image:url("@{logotypes}/tsagy.png");}
+             &.niishp {background-image:url("@{logotypes}/niishp.jpg");}
+             &.rudn {background-image:url("@{logotypes}/rudn.svg");}
+             &.mai {background-image:url("@{logotypes}/mai.svg");}
+             &.amur {background-image:url("@{logotypes}/amur.jpg");}
+             &.mitht {background-image:url("@{logotypes}/mitht.png");}
+             &.ciam {background-image:url("@{logotypes}/ciam.jpg");}
+             &.fano {background-image:url("@{logotypes}/fano.png");}
+             &.rnf {background-image:url("@{logotypes}/rcf.svg");}
+             &.rfbr {background-image:url("@{logotypes}/rfbr.png");}
+             &.ipmeh {background-image:url("@{logotypes}/ipmeh.svg");}
+             &.itam {background-image:url("@{logotypes}/iptm.svg");}
+            }   
+            
+        }
+        
+    }
+             
+        
+    }

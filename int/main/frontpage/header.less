@@ -1,0 +1,71 @@
+// main: index.less
+
+
+.front_header {
+    padding: 5% 0;
+    color: #333;
+}
+
+.header-ras_name {
+    font-size: 1.3em;
+    color: #888;
+}
+
+.header-ras_iam {
+    
+    padding: 2em 0; 
+    
+    span {
+       display: block;
+       font-weight: 700;
+       line-height: 100%;
+        font-size: 7em;
+    }
+    
+}
+
+.header-ras_adress {
+    padding: 2em 0;
+    
+}
+
+.header-department {
+    padding-left: 2em;
+    ul {
+        background-color: #ece5ce;
+        li {
+            display: block;
+            padding: 1em 0;
+            
+            span {
+                display: block;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+
+.front_menu {
+    padding-top: 1em;
+    ul {
+        margin: 0;padding: 0;
+        padding: 0.5em 0;
+        
+        li {
+            display: inline-block;
+            padding-right: 1em;
+            
+            a {
+                font-size: 1.2em;
+                text-decoration: none;
+                border-bottom: 1px solid @blue;
+                
+                &[href*='#'] {
+                   border-bottom: 1px dashed @blue;
+                }
+            }
+        }
+    }
+    
+}
