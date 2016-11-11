@@ -36,8 +36,6 @@ $(window).scroll(function() {
 
 
 
-
-
 $('#video-block').exists(function () {
     $('.video-loader').click(function () {
         var iframe = $(this).attr("data-iframe");
@@ -64,7 +62,6 @@ $("#filterform input:radio").click(function () {
     var fltr = $(this).val();
     $("#eqlist .eqit").fadeOut(500);
     $("#eqlist .eqit." + fltr + "").fadeIn(500);
-  //  return false;
 });    
 
 
@@ -108,14 +105,13 @@ var perpage = $(this).data('count');
 var sz = $(this).data('size');
 var that = $(this);
 
- var extr = 'license,date_upload,date_taken,owner_name,icon_server,original_format,last_update,geo,tags,machine_tags,o_dims,views,media,path_alias,url_sq,url_q,url_t,url_s,url_c,url_m,url_o';
+var extr = 'license,date_upload,date_taken,owner_name,icon_server,original_format,last_update,geo,tags,machine_tags,o_dims,views,media,path_alias,url_sq,url_q,url_t,url_s,url_c,url_m,url_o';
 var apiCall = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+apikey+"&photoset_id="+album+"&format=json&extras="+extr+"&per_page="+perpage+"&jsoncallback=?";
 
-    $.getJSON(apiCall, function(data){
+$.getJSON(apiCall, function(data){
 
    that.html('');
-
-    $.each(data.photoset.photo, function(i,photo){
+$.each(data.photoset.photo, function(i,photo){
       var img_src = photo['url_'+sz];
       var a_href = photo['url_o'];
       var id = photo['id'];
@@ -123,15 +119,10 @@ var apiCall = "https://api.flickr.com/services/rest/?method=flickr.photosets.get
       var url = 'https://www.flickr.com/photos/'+alias+'/'+id;
 
 that.append('<div class="flickr_img"><a href="'+url+'" class="flickr_image" style="background-image: url('+img_src+');">&nbsp;</a></div>')
-
-
-      });
-    });
-
-  });
+       });
+     });
+   });
  });
-
-
 
 
 
@@ -143,8 +134,7 @@ $("a[href*='.gif'], a[href*='.jpg'], a[href*='.jpeg'], a[href*='.png'], a[href*=
     enabled:true}
 });
 
-
-	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 		disableOn: 700,
 		type: 'iframe',
         mainClass:'my-mfp-zoom-in',
@@ -188,7 +178,7 @@ $("html").css("overflow-y","hidden");
 
 var post_link = $(this).attr("data-link");
 	$("body").append('<div id="container"></div>');
-	$("body").append('<div id="sitback"></div>');
+	$("body").append('<div id="sitback" class="sitback"></div>');
 
 
 	$("#container").html(svgloader);
@@ -196,10 +186,11 @@ var post_link = $(this).attr("data-link");
 
 $("#sitback").animate({opacity: "0.6"}, 300 );
       return false;
-    });
+    
+});
 
 
-$(document).on("click", "#sitback", function(event){
+$(document).on("click", ".sitback", function(event){
     $("#container").remove();
     $("#sitback").remove();
     $("html").css("overflow-y","auto");

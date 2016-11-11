@@ -1,5 +1,13 @@
-<div id="container">
 <?php 
+$args = array(
+'page_id' => $_POST['getpost'],
+'post_type' => 'any'
+);
+query_posts($args);
+if (have_posts()) : while (have_posts()) : the_post(); 
+
+
+
 $image = '';
 if( get_field('photo') ):
 
@@ -23,14 +31,17 @@ endif;
 
 ?>
 
+
 <div class="side-toggle_wrap">
+   
+   <span class="sitback"><i class="icon-ios-close-empty"></i></span>
    
     <div class="portrait">
 <a href="<?php echo $image[0]; ?>"><img src="<?php echo $image[0]; ?>" alt=""> </a> 
     </div>
     
     <div class="name">
-        <?php the_title(); ?>
+        <a href="<?php the_permalink(); ?>" ><?php the_title(); ?> </a> 
     </div>
   
 <?php if(is_singular('employees') ) : ?>    
@@ -68,4 +79,22 @@ endif;
     
 </div>
 
-</div>
+
+<?php endwhile; else : ?>
+<?php endif; ?>
+
+<?php if( current_user_can('administrator') ){ ?>
+<div class="center"><h5><?php print_r($_POST);?></h5></div>
+<?php } ?>
+
+
+<script>
+    
+var postURL = '<?php the_permalink(); ?>';
+var postTTL = '<?php the_title(); ?>';  
+window.history.pushState('Object', postTTL, postURL); 
+
+    
+$(".side-toggle_wrap").animate({right: "0"}, 600 );
+    
+</script>

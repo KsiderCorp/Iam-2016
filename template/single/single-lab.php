@@ -37,7 +37,7 @@
             
             <div class="pure-u-1-3">
                 
-                <div class="single_side">
+                <div class="single_side laboratory">
                 
 <div class="lab_boss">
      <?php 

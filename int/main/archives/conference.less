@@ -1,1 +1,101 @@
 // main: index.less
+
+
+.conference_wrap {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    
+    justify-content: flex-start;
+    align-items: stretch;
+    
+    flex-wrap: wrap;
+    
+    padding: 2em 0;
+}
+
+.conference_block {
+    width: 30.333%;
+    margin: 1%;
+    padding-bottom: 2em;
+    
+    .conferenc_titel { 
+        font-size: 1.2em;
+        a {
+            color: #333;
+            font-weight: 700;
+        }
+    }
+    .conference_date { 
+        color: #666;
+        padding: 0.5em  0;
+    }
+    
+    &.current {
+        position: relative;
+        width:100%;
+        margin: 0 auto;
+        padding: 4em;
+        text-align: center;
+        background-color: #333;
+        
+        margin-bottom: 2em;
+        .animation(0.4s);
+        &:hover {
+            background-color: #111;
+            
+        }
+        
+        .conferenc_titel {
+            font-size: 2.2em;
+            a {
+                color: #fff;
+                text-decoration: none;
+             //   border-bottom: 1px solid #fff;
+                font-weight: 400;
+                font-family: @serif;
+            }
+           }
+        .conference_date {
+            display: inline-block;
+            padding: 1em;
+            margin-top: 1em;
+            color: #333;
+            background-color: rgba(255,255,255,1);
+        }
+        
+        &:before {
+            content: 'Текущая';
+            background-color: #e74c3c;
+            color: #fff;
+            display: inline-block;
+            position: absolute;
+            top: 0; right: 0;
+            padding: 1em;
+            
+            border-bottom-left-radius: 1em;
+            
+        }
+
+    }
+}
+
+.subscribe {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    
+    h4 {
+        .upper(1.3em);
+    }
+    
+    .mchwhy {
+        font-size: 0.8em;
+        color: #888;
+        img {
+            display: inline-block; height: 1.3em;
+        }
+    }
+}

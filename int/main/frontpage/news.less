@@ -13,8 +13,8 @@
     display: -o-flex;
     display: flex;
     
-    background-color: #ccc;
-    background-color: #e0e0e0;
+   // background-color: #ccc;
+   //  background-color: #e0e0e0;
     
   
     
@@ -24,18 +24,65 @@
     align-items: stretch;
     
     .slipnews {
-        width: 33.3333%;
+        width: 33.333%;
+       
+        .cover {
+            display: none;
+            z-index: 1;
+        }
+        
         .slipcontent {
-            padding: 1em;
-            a {
+            padding: 2em 1em;
+            position: relative;
+            z-index: 4;
+            
+             a {
                 font-size: 1.2em;
                 text-decoration: none;
                 border-bottom: 1px solid @blue;
+                }
+        }
+        
+        
+    &:first-child {
+         width: 66.666%;
+         display: flex;
+         align-items: flex-end;
+         justify-content: flex-start;
+         position: relative;
+          
+        padding-top: 2em;
+        .slipcontent {
+           color: #fff;
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 2.2em;
+                border: 0;
+                font-weight: 700;
             }
         }
+        
+          .cover {
+              display: block;
+              position: absolute;
+              z-index: 1;
+              top: 0;bottom: 0;right: 0;left: 0;
+              .bgc;
+              
+              &:after{
+              content: ' ';
+              position: absolute;
+              z-index: 2;
+              top: 0;bottom: 0;right: 0;left: 0;
+            .gradient(transparent, #333);   
+            //  background-color: rgba(49,49,49,0.5);
+              }
+          } 
+          
+        }
+        
       }
-    
-    padding: 2em 0;
     
 }
 

@@ -1,13 +1,7 @@
 <div class="front_page-news">
     <div class="block">
 
-<div class="lineblock_wrap allnews">
 
-    <div class="">
-    <h2><!--Все --><a href="/category/news/">Новости</a></h2>
-    </div>
-    
-</div>
         <div class="pure-g">
 
             <div class="pure-u-1">
@@ -22,34 +16,59 @@ rsort( $sticky );
 $sticky = array_slice( $sticky, 0, 10);
 $argst = array( 
 'category_name' => 'news',
-'posts_per_page' => 3, 
+'posts_per_page' => 2, 
 'order'=> 'DESC',
 'post__in' => $sticky,
 'caller_get_posts' => 1, );
 query_posts($argst );
-if (have_posts()) :  while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID;?>
+if (have_posts()) :  while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID;
+
+$image_url = ''; 
+if( has_post_thumbnail() ):
+    $image_id = get_post_thumbnail_id();
+    $image_url = wp_get_attachment_image_src($image_id);
+    $image_url = $image_url[0];
+    
+elseif( get_field('postphoto') ):
+    $image_url = get_field('postphoto');    
+
+else : 
+    $image_url = 'https://source.unsplash.com/category/technology/500x400'; 
+endif;                    
+?>
 
 <div class="slipnews id<?php the_ID(); ?>">
-     <div class="slipcover id<?php the_ID(); ?>">
-        <div class="slipcontent">
-           
-<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+       
+        <div class="cover id<?php the_ID(); ?>">
+            <style>
+                .cover.id<?php the_ID(); ?> {
+                    background-image: url(<?php echo $image_url;?>);
+/*background-image: url(https://source.unsplash.com/category/technology/600x500);*/
+                }  
+            </style>   
+        </div>
+
+      <div class="slipcontent">
+
+        <div class="slip_news-content">
+           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+           <p><?php the_excerpt(); ?></p>
+        </div>  
             
-            <p>
-            <?php the_excerpt(); ?>
-            </p>
       </div>
-    </div>                       
+                          
 </div>
 
 <?php endwhile; endif; ?>
 
                 </div>
 
-<div class="linenews">
 
                    
-                        <?php 
+                   <div class="linenews">
+
+   
+ <?php 
 $tags = array( 
 'posts_per_page' => 10, 
 'order'=> 'DESC',
@@ -81,7 +100,13 @@ if (have_posts()) : while (have_posts()) : the_post(); $do_not_duplicate[] = $po
  <?php endwhile; else : endif; ?>
 
 
+<div class="lineblock_wrap allnews">
 
+    <div class="">
+    <h4>Все <a href="/category/news/">новости</a></h4>
+    </div>
+    
+</div> 
                </div>
     
     </div>

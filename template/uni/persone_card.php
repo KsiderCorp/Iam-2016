@@ -26,7 +26,7 @@ background-image: url(<?php echo $image[0]; ?>);}
       </div>
       
       <div class="card_name">
-<a href="<?php the_permalink(); ?>" class="card_link" data-id="<?php the_ID(); ?>" rel="<?php the_ID(); ?>"  data-link="<?php echo home_url();?>/ajaxloader/"><?php the_title(); ?></a> <?php if( current_user_can('administrator') ){ ?>
+<a href="<?php the_permalink(); ?>" class="card_link post-link" data-id="<?php the_ID(); ?>" rel="<?php the_ID(); ?>"  data-link="<?php echo home_url();?>/ajaxloader/"><?php the_title(); ?></a> <?php if( current_user_can('administrator') ){ ?>
 (<?php the_ID(); ?>)
 <?php } ?>     
       </div> 
