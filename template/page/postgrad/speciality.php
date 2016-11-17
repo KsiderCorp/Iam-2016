@@ -15,28 +15,7 @@
       <p>«Механика деформируемого твердого тела» — область науки и техники, изучающая закономерности процессов деформирования, повреждения и разрушения материалов различной природы, а также напряженно-деформированное состояние твердых тел из этих материалов, при механических, тепловых, радиационных, статических и динамических воздействиях в пассивных и активных, газовых и жидких средах и полях различной природы.</p>
      <div class="fgos"></div>
      </div>
-         
-                   
-      <div class="sp_lectures">
-        
-        <div class="sp_lectures-head">Лекции:</div>
-        
-         <div class="sp_lecture">
-          <span class="sp_lectures-titele">
-          <span class="first_quote">«</span><a href="">Новые функциональные наноматериалы</a></span>» — <span class="khn">к.т.н.</span> <a href="" class="lecturer">Корнев Юрий Витальевич</a>
-         </div>          
-         
-         <div class="sp_lecture">
-          <span class="sp_lectures-titele">
-          <span class="first_quote">«</span><a href="">Реология полимерных материалов</a></span>» — <span class="khn">к.т.н.</span> <a href="" class="lecturer">Семенов Николай Александрович</a>
-         </div>          
-         
-         <div class="sp_lecture">
-          <span class="sp_lectures-titele">
-          <span class="first_quote">«</span><a href="">Новые функциональные наноматериалы</a></span>» — <span class="khn">к.т.н.</span> <a href="" class="lecturer">Корнев Юрий Витальевич</a>
-         </div> 
-          
-      </div> 
+ 
 </div>   
         
 <div class="speciality_block">
@@ -52,28 +31,7 @@
      <div class="fgos"></div>
      </div>
          
-                   
-      <div class="sp_lectures">
-        
-        <div class="sp_lectures-head">Лекции:</div>
-        
-         <div class="sp_lecture">
-          <span class="sp_lectures-titele">
-          <span class="first_quote">«</span><a href="">Новые функциональные наноматериалы</a></span>» — <span class="khn">к.т.н.</span> <a href="" class="lecturer">Корнев Юрий Витальевич</a>
-         </div>          
-         
-         <div class="sp_lecture">
-          <span class="sp_lectures-titele">
-          <span class="first_quote">«</span><a href="">Реология полимерных материалов</a></span>» — <span class="khn">к.т.н.</span> <a href="" class="lecturer">Семенов Николай Александрович</a>
-         </div>          
-         
-         <div class="sp_lecture">
-          <span class="sp_lectures-titele">
-          <span class="first_quote">«</span><a href="">Новые функциональные наноматериалы</a></span>» — <span class="khn">к.т.н.</span> <a href="" class="lecturer">Корнев Юрий Витальевич</a>
-         </div> 
-          
-      </div> 
-</div>
+    </div>
                    
 <div class="speciality_block">
       <div class="sp_header">
@@ -84,28 +42,6 @@
       <p>Механика жидкости, газа и плазмы – область естественных наук, изучающая на основе идей и подходов кинетической теории и механики сплошной среды процессы и явления, сопровождающие течения однородных и многофазных сред при механических, тепловых, электромагнитных и прочих воздействиях, а также происходящие при взаимодействии текучих сред с движущимися или неподвижными телами. Задачей механики жидкости, газа и плазмы является построение и исследование математических моделей для описания параметров потоков движущихся сред в широком диапазоне условий, проведение экспериментальных исследований течений и их взаимодействия с телами и интерпретация экспериментальных данных с целью прогнозирования и контроля природных явлений и технологических процессов, включающих движения текучих сред, а также разработки перспективных космических, летательных и плавательных аппаратов.</p>
      <div class="fgos"></div>
      </div>
-         
-                   
-      <div class="sp_lectures">
-        
-        <div class="sp_lectures-head">Лекции:</div>
-        
-         <div class="sp_lecture">
-          <span class="sp_lectures-titele">
-          <span class="first_quote">«</span><a href="">Новые функциональные наноматериалы</a></span>» — <span class="khn">к.т.н.</span> <a href="" class="lecturer">Корнев Юрий Витальевич</a>
-         </div>          
-         
-         <div class="sp_lecture">
-          <span class="sp_lectures-titele">
-          <span class="first_quote">«</span><a href="">Реология полимерных материалов</a></span>» — <span class="khn">к.т.н.</span> <a href="" class="lecturer">Семенов Николай Александрович</a>
-         </div>          
-         
-         <div class="sp_lecture">
-          <span class="sp_lectures-titele">
-          <span class="first_quote">«</span><a href="">Новые функциональные наноматериалы</a></span>» — <span class="khn">к.т.н.</span> <a href="" class="lecturer">Корнев Юрий Витальевич</a>
-         </div> 
-          
-      </div> 
 </div>                                          
                     
           </div>

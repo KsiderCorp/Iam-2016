@@ -6,10 +6,10 @@
  include(TEMPLATEPATH . '/template/single/single-lab.php'); // yes
  
  elseif( is_singular('equipment') ) : 
- include(TEMPLATEPATH . '/template/single/single-eqp.php'); 
+ include(TEMPLATEPATH . '/template/single/single-eqp.php');  // yes
  
  elseif( is_singular('conference') ) : 
- include(TEMPLATEPATH . '/template/single/single-conf.php');
+ include(TEMPLATEPATH . '/template/single/single-conf.php'); // yes
 
  elseif( is_singular('employees') || is_singular('gift')  ) : 
  include(TEMPLATEPATH . '/template/single/single-employees.php'); // yes  
@@ -17,9 +17,8 @@
  elseif( is_singular('science') ) : 
  include(TEMPLATEPATH . '/template/single/single-science.php');   
 
-
  else : 
- include(TEMPLATEPATH . '/template/single/single-else.php'); 
+ include(TEMPLATEPATH . '/template/single/single-else.php');  // yes
  endif; ?>
 
 <?php endwhile; else : ?>

@@ -21,6 +21,7 @@
          
 <div class="grad-ourlaw">
 <a href="https://www.dropbox.com/s/murrqqrypmpybpf/%D0%9F%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BE%D0%B1%20%D0%B0%D1%81%D0%BF%D0%B8%D1%80%D0%B0%D0%BD%D1%82%D1%83%D1%80%D0%B5.pdf?dl=1">Положение об аспирантуре</a>
+
 <a href="http://i2.wp.com/iam.ras.ru/wp-content/uploads/2015/04/scan0035.jpg">Лицензия на осуществление образовательной деятельности</a>
 <a href="http://i2.wp.com/iam.ras.ru/wp-content/uploads/2015/04/scan0036.jpg">Приложение № 1.1 к лицензии</a>
 <!--<a href="">Свидетельство о государственной аккредитации</a>-->
@@ -76,27 +77,17 @@
             </div>
             
             <div class="pure-u-1-3">
-                
-<div class="grad-diretor">
+             <div class="posrgrd_side"> 
+<!--<div class="grad-diretor">
                 
 
-<?php $args = array( 
-'post_type'=>'employees','include' => 572);
-$postdoc = get_posts( $args );  
-foreach ($postdoc as $post) :  setup_postdata($post);?>
 
-<?php include(TEMPLATEPATH . '/template/uni/persone_card.php'); ?>           
-       
-<?php wp_reset_postdata(); ?>
-<?php endforeach; ?>  
-    
-                                                           
-                            
-                </div>
+
+</div>-->
                 
 <?php include(TEMPLATEPATH . '/template/page/postgrad/enroll.php'); ?>              
   
-              
+            </div>    
             </div>
         </div>
     </div>

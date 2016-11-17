@@ -5,10 +5,10 @@
 if( is_category('news') ){
     include(TEMPLATEPATH . '/template/archive/news.php'); // yes
 }
-/*elseif ( is_category('purchase') ){
-    include(TEMPLATEPATH . '/template/archive/purchase.php');
+elseif ( is_category('purchase') ){
+    include(TEMPLATEPATH . '/template/archive/purchase.php');// yes
 }
-elseif ( is_category('reports') ){
+/*elseif ( is_category('reports') ){
     include(TEMPLATEPATH . '/template/archive/reports.php');
 }
 elseif ( is_category('vote') ){

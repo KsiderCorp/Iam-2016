@@ -2,12 +2,12 @@
 $hboss = array( 
 'post_type'=>'employees',
 'emptype' =>  'admpack', 
-'emptype' =>  'hightboss', 
-'posts_per_page' => 3, 
-'orderby'=> 'date',
+// 'emptype' =>  'hightboss', 
+'posts_per_page' => -1, 
+'orderby'=> 'modified',
 'order'=> 'DESC' );
 
-$admin = array( 
+/*$admin = array( 
 	'tax_query' => array(
 		'relation' => 'AND',
 		array(
@@ -25,7 +25,7 @@ $admin = array(
 'post_type'=>'employees',
 'posts_per_page' => -1, 
 'orderby'=> 'date',
-'order'=> 'DESC', ); 
+'order'=> 'DESC', );*/ 
 
 ?>
    
@@ -43,7 +43,7 @@ $admin = array(
 <?php $postslist = get_posts( $hboss );  
 foreach ($postslist as $post) :  setup_postdata($post);?>
 
-<div class="pure-u-1-3">
+<div class="pure-u-1-4">
 <?php include(TEMPLATEPATH . '/template/uni/persone_card.php'); ?>
 </div>
 <?php wp_reset_postdata(); ?>
@@ -54,14 +54,6 @@ foreach ($postslist as $post) :  setup_postdata($post);?>
 
 <div class="pure-g">
 
-    <?php $postslist = get_posts( $admin );  
-foreach ($postslist as $post) :  setup_postdata($post);?>
-        <div class="pure-u-1-5 pure-u-sm-1">
-        
-<?php include(TEMPLATEPATH . '/template/uni/persone_card.php'); ?>
-        </div>
-<?php wp_reset_postdata(); ?>
-<?php endforeach; ?>
 
 </div> 
                        

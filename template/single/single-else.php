@@ -13,7 +13,7 @@
     </div>
 
     <div class="single-tax descript_blc">
-        <?php 
+<?php 
     $category = get_the_terms( $post->ID, 'category' );
 
 foreach( $category as $caty ){
@@ -23,16 +23,6 @@ foreach( $category as $caty ){
 ?>
     </div>
     
-<!--    
-   <div class="single-social  descript_blc">
-    <div class="likely likely-small" data-single-title="Поделиться">
-		<div class="facebook" title="Поделиться ссылкой на Фейсбуке"></div>
-		<div class="twitter" title="Поделиться ссылкой в Твиттере"></div>
-		<div class="vkontakte" title="Поделиться ссылкой во Вконтакте"></div>
-		<div class="gplus" title="Поделиться ссылкой в Гугл-плюсе"></div>
-    </div>
-   </div>
--->
     
 </div>
         
