@@ -23,21 +23,27 @@ elseif ( is_post_type_archive('employees') ) {
 elseif ( is_post_type_archive('equipment') ) {
     include(TEMPLATEPATH . '/template/archive/equipment.php'); // yes
 }
-elseif ( is_post_type_archive('science') ) {
-    include(TEMPLATEPATH . '/template/archive/science.php');
-}
+
 elseif ( is_tax( 'authors') ) {
     include(TEMPLATEPATH . '/template/archive/authors.php');
 }
 elseif ( is_tax( 'bookgift') ) {
     include(TEMPLATEPATH . '/template/archive/bookgift.php'); // yes
 }
+
+
+elseif ( is_post_type_archive('science') ) {
+    include(TEMPLATEPATH . '/template/archive/science.php');
+}
+
 elseif ( is_tax( 'science_categories') ) {
     include(TEMPLATEPATH . '/template/archive/science_categories.php');
 }
-elseif ( is_tax( 'typeconf') ) {
+
+
+/*elseif ( is_tax( 'typeconf') ) {
     include(TEMPLATEPATH . '/template/archive/typeconf.php');
-}
+}*/
 elseif ( is_tag() ) {
     include(TEMPLATEPATH . '/template/archive/tags.php');
 }

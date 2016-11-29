@@ -1,0 +1,60 @@
+// main: ../main.less
+
+
+
+.break_block-pic {
+    
+    .bgc;
+    height: 400px;
+    background-color: #ddd;
+    
+  .video_block {
+      
+      height: 100%;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      
+      align-items: center;
+      justify-content: center;
+      
+      
+ 
+                
+        a {  @ms:30px;   
+             display: block;
+             width: 0;height: 0;
+             border-top: @ms solid transparent;
+             border-bottom: @ms solid transparent;
+             border-left: @ms+15 solid @white;
+             position: relative;
+             z-index: 1;
+             transition: all 0.3s;
+             cursor: pointer;
+           &:before {
+                content: '';
+                position: absolute;
+                top: -1.5*@ms;
+                bottom: -1.5*@ms;
+                left: -2.5*@ms; 
+                right: -0.5*@ms;
+
+                border-radius: 50%;
+                border: 2px solid  @white;
+                z-index: 2;
+                transition: all 0.3s;
+                }
+           &:after {
+                 content: '';
+                 opacity: 0;
+                 transition: opacity 0.6s;
+                 }         
+      &:hover:before, 
+      .play:focus:before {transform: scale(1.1);}
+     }
+}
+    
+    
+}

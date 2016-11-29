@@ -180,6 +180,18 @@ return $addemp;
 }
 add_shortcode( 'flickr', 'flickr' );
 
+function add_file( $atts , $content = null ) {
+	extract( shortcode_atts(
+		array(
+			'href' => '',
+			'size' => ''
+		), $atts )
+	);
+ $out_file = "<a href='".$href."' class='outfile'><span>".$content."</span></a>";   
+return $out_file;
+}
+add_shortcode( 'add_file', 'add_file' );
+
 // Добавляем кнопки в текстовый html-редактор
 add_action( 'admin_print_footer_scripts', 'add_sheensay_quicktags' );
 function add_sheensay_quicktags() {

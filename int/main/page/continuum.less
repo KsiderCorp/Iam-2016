@@ -1,0 +1,80 @@
+// main: ../main.less
+
+
+
+.workshop_registration {
+    
+padding: 2em 0;
+    margin: 1em 0;
+   
+    
+    form {
+   padding: 2em;
+   margin: -2em;
+//   border: 2px dashed #000;
+   background-color: #fff;
+   box-shadow: 6px 6px 30px -5px #cccccc;   
+        
+        label {
+            display: block;
+        }
+        
+        input {
+            display: inline-block;
+            width: 250px;
+            padding: 0.3em;
+            
+            &[type=text],
+            &[type=email]{
+                border: 1px solid #ddd;
+                outline: 0;
+            }
+        }
+        
+        p {
+            padding: 0;
+            margin-bottom: 1.2em;
+        }
+    }
+    
+}
+
+
+.workshop_list {
+    padding-left: 2em;
+    
+    .workshop_list-block  {
+       margin-bottom: 1em;
+        padding: 1em;
+        font-size: 0.8em;
+        
+        
+        &.future {
+            font-size: 1.1em;
+            background-color: #fff;
+            padding-bottom: 1em;
+            
+            .workshop_list-titel {
+                    span {
+                        display: block;
+                        color: #888;
+                    }
+                }
+        
+        }
+        
+        .workshop_list-titel {
+            a {
+                font-weight: bold;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+    
+}
+
+.continuum_chief-list {
+    font-size: 0.8em;
+}

@@ -35,9 +35,11 @@
      
 <ul>
     <li><a href="/education/">Образование</a></li>
-    <li><a href="/equipment/">Экспериментальная база</a></li>
+    <li><a href="/postgraduate/">Аспирантура</a></li>
+
     <li><a href="/mkmk/">Журнал</a></li>
-    <li><a href="/conference/" class="front_conf-banner">Конференции</a></li>
+    <li><a href="/conference/" class="front_conf-banner">Конференции</a></li>    
+    <li><a href="/science/" class="front_conf-banner">Наука</a></li>
 </ul>
 
 </div>              

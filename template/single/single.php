@@ -22,9 +22,6 @@
  endif; ?>
 
 <?php endwhile; else : ?>
-
-
-
 <?php endif; ?>
 
 	

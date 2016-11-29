@@ -33,15 +33,47 @@ $(window).scroll(function() {
 	}
 });
 });
+    
+$('#addpoupup').exists(function() {
+
+$(window).scroll(function() 
+{
+if  ($(window).scrollTop() == $(document).height() - $(window).height()) 
+     {
+       $('#addpoupup .subscribe').addClass('opened')
+       .animate({
+          top: "5%",}, 
+          {queue:false, 
+              duration:500, 
+              easing: 'easeOutQuart'} );
+
+        
+         
+     }
+    else {
+		$('#addpoupup .subscribe').removeClass('opened')
+        .animate({
+          top: "700%",}, 
+          {queue:false, 
+              duration:500, 
+              easing: 'easeOutQuart'} );
+	}
+});
+  
+    
+    
+});
 
 
 
 $('#video-block').exists(function () {
     $('.video-loader').click(function () {
         var iframe = $(this).attr("data-iframe");
+        
         $(".video-block").addClass("played");
-        $(".logoblock").append("<a href='/science/' class='logo-science'><i class='icon-arrow-left-1'></i>Наука</a>");
-        $(".sc_single-video").html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + iframe + '?controls=2&showinfo=0&autoplay=1&vq=hd720;" frameborder="0" allowfullscreen></iframe>');
+        
+        $(".video_block").html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + iframe + '?controls=2&showinfo=0&autoplay=1&vq=hd720;" frameborder="0" allowfullscreen></iframe>');
+        
         return false;
     });
 });
@@ -160,8 +192,8 @@ $('popup-gallery').magnificPopup({
 
 
 // neo
+$(document).on("click", ".post-link", function(event){
 
-$(".post-link").click(function(){
 
     $("#container").remove();
     $("#sitback").remove();
@@ -196,7 +228,25 @@ $(document).on("click", ".sitback", function(event){
     $("html").css("overflow-y","auto");
 	window.history.back();
 });
+    
+    
+$("#searchform").submit(function(){
+var s = $(this).serialize();
+$.ajaxSetup({
+        cache:false,
+        type: "POST",
+        data: s,
+    });
+var post_link = $(this).attr("data-link");
 
+	$(".search_response").html(svgloader);
+	$(".search_response").load('/?s='+s);
+    return false;
+});   
+
+ $(document).on("click", ".submenu", function(event){
+  $('html').toggleClass('ovfh')
+ });   
 
 
 

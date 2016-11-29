@@ -10,6 +10,9 @@ elseif( is_page('mkmk') ){
 elseif( is_page('getmail') ){ 
   include(TEMPLATEPATH . '/template/page/getmail.php'); 
 }
+elseif( is_page('en') ){ 
+  include(TEMPLATEPATH . '/template/page/english.php'); 
+}
 else { ?> 
   
 <div class="block">
@@ -36,11 +39,7 @@ else { ?>
         <div class="pure-g">
             <div class="pure-u-2-3">
         
-   
-
-       
-                    
-                              
+                             
         <div class="single_content">
             
         <div class="single_content-exerpt lead hide">

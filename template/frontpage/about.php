@@ -4,6 +4,7 @@
        <h2>Об институте</h2>
     <div class="about-menu">
 <ul class="about_nav">
+    <li><a href="/equipment/">Экспериментальная база</a></li>
     <li><a href="/reached/gift/">Награды</a></li>
     <li><a href="/reached/book/">Книги и монографии</a></li>
     <li><a href="/reached/patents/">Патенты</a></li>
