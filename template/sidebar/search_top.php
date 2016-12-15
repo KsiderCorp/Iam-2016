@@ -1,6 +1,4 @@
-
-
- <div class="search_io"> 
+<div class="search_io"> 
    <div class="block">
 
 <div class="search_line">

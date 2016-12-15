@@ -14,13 +14,12 @@
                <span>механики</span>
            </div>  
                   
-                  
+   <?php $set = get_option('option_name'); ?>              
                   
            <div class="header-ras_adress">
-<i class="icon-map-pin-streamline"></i>125040, Россия, Москва, 
-Ленинградский проспект д.7 <a href="https://www.google.ru/maps/@55.7795358,37.5759433,18" class=""><i class="icon-external-link"></i></a><br>
-<i class="icon-android-call"></i> +7 495 946-18-06,<br>
-<i class="icon-email-mail-streamline"></i> <a href="mailto:iam@iam.ras.ru"> iam@iam.ras.ru</a>
+<?php echo $set['adress']; ?>  
+<i class="icon-android-call"></i> <?php echo $set['phone']; ?>,<br>
+<i class="icon-email-mail-streamline"></i> <a href="mailto:<?php echo $set['mail']; ?>"> <?php echo $set['mail']; ?></a>
            </div> 
                
  <div class="front_menu">
@@ -33,15 +32,22 @@
 		<li><a href="#administration" class="scrollto">Администрация</a></li>
      </ul>
      
-<ul>
+<!--<ul>
     <li><a href="/education/">Образование</a></li>
     <li><a href="/postgraduate/">Аспирантура</a></li>
 
     <li><a href="/mkmk/">Журнал</a></li>
     <li><a href="/conference/" class="front_conf-banner">Конференции</a></li>    
     <li><a href="/science/" class="front_conf-banner">Наука</a></li>
+</ul>-->
+<ul>
+ <?php $kinde = array(  
+		'container' => false,
+		'theme_location'  => 'head_nav', 
+		'items_wrap' => '%3$s'		);  
+wp_nav_menu($kinde);  
+?>
 </ul>
-
 </div>              
                
                 
@@ -56,6 +62,8 @@ $omakm = "102";
 $lpcm = "48";
 $lpcmpt = "23";
 $lncmmcm = "109";
+$lamimpncag = "2962";
+    
 ?>
 
 
@@ -80,6 +88,10 @@ $lncmmcm = "109";
     <li>
     <a href="/units/lnmmk/" class="fplab">Лаборатория неклассических моделей механики композиционных материалов</a>
     <span class="front_boss-name">Руководитель лаборатории <?php echo do_shortcode("[pep id='".$lncmmcm."' pp='lncmmcm']Лурье С.А.[/pep]"); ?></span>
+    </li>    
+    <li>
+    <a href="/units/lamimpncag/" class="fplab">Лаборатория перспективных методов исследования механических свойств природных композитов и геотехнологий</a>
+    <span class="front_boss-name">Руководитель лаборатории <?php echo do_shortcode("[pep id='".$lamimpncag."' pp='lncmmcm']Королев М.В.[/pep]"); ?></span>
     </li>
 </ul>
 

@@ -7,8 +7,12 @@ if( is_page('education') ){
 elseif( is_page('mkmk') ){
   include(TEMPLATEPATH . '/template/page/mkmk.php'); 
 }
-elseif( is_page('getmail') ){ 
+elseif( is_page('getmail') || is_page('mail') ){ 
   include(TEMPLATEPATH . '/template/page/getmail.php'); 
+}
+
+elseif( is_page('webinfo') || is_page('edition') ){ 
+  include(TEMPLATEPATH . '/template/page/editors.php'); 
 }
 elseif( is_page('en') ){ 
   include(TEMPLATEPATH . '/template/page/english.php'); 
@@ -29,9 +33,11 @@ else { ?>
         <span><?php the_time('j F, Y | G:i'); ?></span>
     </div>
 
-    <div class="single-tax descript_blc">
-
-    </div>
+    
+<?php  if($post->post_parent) {
+    echo '<div class="single-tax descript_blc"><a href="'.get_permalink($post->post_parent).'">'.get_the_title($post->post_parent).'<i class="icon-ios-arrow-thin-up"></i></a></div>';
+       } ; ?>
+    
     
     
 </div>
@@ -64,72 +70,29 @@ else { ?>
             
             <div class="pure-u-1-3">
                 
-                <div class="single_side">
-                
- <?php 
-$poid = array( $post->ID );    
-if( has_term( '', 'post_tag', $post->ID ) ){
-?> 
+<div class="single_side">
 
- <div class="related_posts">
+<?php 
+$rel = get_field('rel');
+if( $rel ): ?>
 
-<?php
-
-    $gettages = get_the_tags($post->ID);
-    $tags = array();
-    foreach($gettages as $tag){
-        $tag_id = $tag->term_id;
-        $tags[] = $tag_id;
-    }
-      
-    
-    $rel = array( 
+<div class="related_posts">
+	<ul>
+	<?php foreach( $rel as $p ): // variable must NOT be called $post (IMPORTANT) ?>
+    <?php setup_postdata($post); ?>
+	    <li>
+	    	<a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo get_the_title( $p->ID ); ?></a>
+	    </li>
+	<?php wp_reset_postdata(); ?>    
+	<?php endforeach; ?>
+	</ul>
 	
-    'posts_per_page' => 5, 
-    'orderby'=> 'date',
-    'order'=> 'DESC', 
-    'exclude' => $post->ID,
-    'tax_query' => array(
-		'relation' => 'OR',
-		array(
-			'taxonomy' => 'post_tag',
-			'field' => 'id',
-			'terms' => $tags ,
-            'operator' => 'IN'
-		),
-	),
-    );     
-    $screl = get_posts( $rel );  
-foreach ($screl as $post) :  setup_postdata($post);
-?>
+	
+</div>
 
-            
-<?php if( get_field('postphoto') ):
-    $image = get_field('postphoto'); ?>
-<style>.cover_pic.id<?php the_ID();?> {background-image: url(<?php echo $image; ?>);}</style>
-<?php else : endif; ?>         
-
- <div class="related_post">
-     
-     <div class="related_post-titel">
-     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>   
-     </div>
-     <div class="related_post-date">
-         <?php the_time('j F, Y | G:i'); ?>
-     </div>
-     
-     <div class="cover_pic id<?php the_ID();?>">&nbsp;</div>
-     
- </div>
-           
-            
-<?php wp_reset_postdata(); endforeach; ?>  
-    </div> 
-   <?php } ?>               
-               
-                </div>
-                
-            </div>
+<?php endif; ?>  
+              
+</div>
         </div>
         
         

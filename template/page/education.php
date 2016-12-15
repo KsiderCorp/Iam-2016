@@ -3,11 +3,6 @@
         <h1>
         Образование 
         </h1>
-        <div class="category_head-submenu">
-        <ul>
-        <li><a href="/postgraduate/">Аспирантура</a></li>
-        </ul>
-        </div>
         
     </div>
     
@@ -18,33 +13,63 @@
        <span>авиационный институт</span><br>
        <span class="base">(Базовая кафедра)</span>
    </h2> 
+<div class="single_discription">
+ 
+    
+<div class="single-tax descript_blc">
+
 <?php 
 $args = array( 
-'post_type'=>'employees',
-'include' => 559,
-'posts_per_page' => 1,);
+    'post_type'=>'employees',
+    'include' => 559,
+    'posts_per_page' => 1,);
 $postslist = get_posts( $args );  
-foreach ($postslist as $post) :  setup_postdata($post);?>           
-<!--Заведующий кафедрой-->
-<?php include(TEMPLATEPATH . '/template/uni/persone_strok.php'); ?> 
+foreach ($postslist as $post) :  setup_postdata($post);
 
-<?php // include(TEMPLATEPATH . '/template/uni/persone_card.php'); ?>
-<?php wp_reset_postdata(); ?>
-<?php endforeach; ?>    
+$image = '';  
+if( get_field('photo') ):
+$attachment_id = get_field('photo');
+$size = "thumbnail";
+$image = wp_get_attachment_image_src( $attachment_id, $size );
+else :
+  $image = get_bloginfo("template_url").'/img/emploers/yo.svg';
+endif; ?>	
+
+<div class="man_strok">
+
+<style>.man_face.id-<?php the_ID(); ?> {background-image: url(<?php echo $image[0]; ?>);}</style>
+   
+    <div class="man_face id-<?php the_ID(); ?>">
+      &nbsp;  
+    </div>
+    <div class="man_cont">
+        
+        <div class="man_name">
+           
+<div>Заведующий кафедрой:</div>
+<a href="<?php the_permalink(); ?>" class="card_link post-link" data-id="<?php the_ID(); ?>" rel="<?php the_ID(); ?>"  data-link="<?php echo home_url();?>/ajaxloader/"><?php the_title(); ?></a> 
+<?php if( current_user_can('administrator') ){  echo get_the_ID();  } ?> 
+
+       <div class="man_pos">
+<?php if( get_field('position') ): the_field('position'); else : echo ''; endif; ?>, <?php if( get_field('rank') ): the_field('rank'); else : echo ''; endif; ?>
+           </div>
+           
+       </div>
+    </div>
+</div>   
+
+<?php wp_reset_postdata(); endforeach; ?> 
+
+</div>
+    
+</div>
           
-<?php 
-/*if( get_field('bakimg') ):
-$attachment_id = get_field('bakimg');
-$size = "large";
-$imagenok = wp_get_attachment_image_src( $attachment_id, $size );
-else : endif; */?>   
        
   <div class="pure-g">
       <div class="pure-u-2-3">
       
 <p>
-<?php if( get_field('bak') ): the_field('bak'); else : echo 'Базовая кафедра'; endif; ?>  </p>            
-         
+<?php if( get_field('bak') ): the_field('bak'); else : echo 'Базовая кафедра'; endif; ?>  </p>          
 <?php 
     if( get_field('nokimg') ):
 $attachment_id = get_field('nokimg');
@@ -58,16 +83,37 @@ $image = wp_get_attachment_image_src( $attachment_id, $size );
 <?php else : endif; ?>            
       </div>
       
-<!--      <div class="pure-u-1-3">
-         
-         <div class="education_side">
-             <div class="lab_boss">
+ <div class="pure-u-1-3">
+
+                                         
+ <div class="education_side">               
+ 
   
-                 
-             </div>
-         </div>
+<?php 
+$rel = get_field('rel');
+if( $rel ): ?>
+
+<div class="related_posts">
+	<ul>
+	<?php foreach( $rel as $p ): // variable must NOT be called $post (IMPORTANT) ?>
+    <?php setup_postdata($post); ?>
+	    <li>
+	    	<a href="<?php echo get_permalink( $p->ID ); ?>"><?php echo get_the_title( $p->ID ); ?></a>
+	    </li>
+	<?php wp_reset_postdata(); ?>    
+	<?php endforeach; ?>
+	</ul>
+	
+	
+</div>
+
+<?php endif; ?>
+ </div>                          
+
+
+         
            
-      </div>-->
+</div>
 
 </div>                   
         

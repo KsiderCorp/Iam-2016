@@ -24,5 +24,4 @@
 <?php endwhile; else : ?>
 <?php endif; ?>
 
-	
 <?php get_footer(); ?>

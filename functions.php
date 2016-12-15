@@ -1,8 +1,8 @@
 <?php
 require 'function/etc.php';
-require 'function/single.php';
+// require 'function/single.php';
 require 'function/shortcode.php';
-// require 'function/seo.php';
+require 'function/setting.php';
 require 'function/custompost.php';
 require 'function/gallery.php';
 require 'function/nav.php';

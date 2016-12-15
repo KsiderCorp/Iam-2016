@@ -14,7 +14,11 @@ query_posts($argst );
 if (have_posts()) :  while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID;?>
        
     <div class="grd_stick">
-      <a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a>  
+      
+      <a href="<?php the_permalink(); ?>">
+          <span><?php the_title(); ?></span>
+      </a>
+        
     </div>
  <?php wp_reset_postdata(); ?>   
 <?php endwhile; endif; ?>    
@@ -22,7 +26,7 @@ if (have_posts()) :  while (have_posts()) : the_post(); $do_not_duplicate[] = $p
     <div class="grd_news">
 <?php 
 $tags = array( 
-    'posts_per_page' => 3, 
+    'posts_per_page' => 9, 
     'order'=> 'DESC',
     'orderby' =>'date', 
     'post__not_in' => $do_not_duplicate,

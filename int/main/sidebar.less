@@ -3,6 +3,7 @@
 .navigation {
     
     justify-content: space-between;
+    padding: 2em 0;
     
     .logotype {
         font-size: 1em;
@@ -60,6 +61,14 @@
         top: 0;right: 0;left: 0;bottom: 0;
         background-color: #eee;
         z-index: 50;
+        
+    background: #989898;
+    background: 
+        linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%),
+        radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%);
+    background-blend-mode: multiply,multiply;
+        background-attachment: fixed;
+        
      }
     
     input[type=checkbox]:checked + label {
@@ -97,7 +106,7 @@
        background-color: #fff; 
        padding: 2em;
        box-shadow: 3px 3px 33px #ddd; 
-        position: relative;
+       position: relative;
        z-index: 3; 
         
         form {
@@ -155,7 +164,7 @@
     
     .search_response {
         padding: 2em;
-       background-color: #eee;
+        background-color: #eee;
         height: auto;
         position: relative;
         bottom: 0;  
@@ -164,7 +173,12 @@
 }
 
 
-
+.site-map {
+    background-color: #fff;
+    padding: 5% 0;
+    width: 90%;
+    overflow-y: auto;
+}
 
 
 

@@ -6,20 +6,59 @@ Template Name: Аспирантура
 
 <div class="block">
     <div class="posdoc-header">
-        <h1><a href="/educatio/"><i class="icon-ios-arrow-thin-left"></i></a> Аспирантура</h1>
+        <h1><a href="/education/"><i class="icon-ios-arrow-thin-left"></i></a> Аспирантура</h1>
     </div>
     
-<?php $args = array( 
-'post_type'=>'employees','include' => 572);
-$postdoc = get_posts( $args );  
-foreach ($postdoc as $post) :  setup_postdata($post);?>
+<div class="single_discription">
+ 
+    
+<div class="single-tax descript_blc">
 
-<div class="director_blog">
-<?php include(TEMPLATEPATH . '/template/uni/persone_strok.php'); ?>   
-</div>       
-       
-<?php wp_reset_postdata(); ?>
-<?php endforeach; ?>  
+<?php 
+$args = array( 
+    'post_type'=>'employees',
+    'include' => 572,
+    'posts_per_page' => 1,);
+$postslist = get_posts( $args );  
+foreach ($postslist as $post) :  setup_postdata($post);
+
+$image = '';  
+if( get_field('photo') ):
+$attachment_id = get_field('photo');
+$size = "thumbnail";
+$image = wp_get_attachment_image_src( $attachment_id, $size );
+else :
+  $image = get_bloginfo("template_url").'/img/emploers/yo.svg';
+endif; ?>	
+
+<div class="man_strok">
+
+<style>.man_face.id-<?php the_ID(); ?> {background-image: url(<?php echo $image[0]; ?>);}</style>
+   
+    <div class="man_face id-<?php the_ID(); ?>">
+      &nbsp;  
+    </div>
+    <div class="man_cont">
+        
+        <div class="man_name">
+           
+<div>Заведующая отделом:</div>
+<a href="<?php the_permalink(); ?>" class="card_link post-link" data-id="<?php the_ID(); ?>" rel="<?php the_ID(); ?>"  data-link="<?php echo home_url();?>/ajaxloader/"><?php the_title(); ?></a> 
+<?php if( current_user_can('administrator') ){  echo get_the_ID();  } ?> 
+
+       <div class="man_pos">
+<?php if( get_field('position') ): the_field('position'); else : echo ''; endif; ?>, <?php if( get_field('rank') ): the_field('rank'); else : echo ''; endif; ?>
+           </div>
+           
+       </div>
+    </div>
+</div>   
+
+<?php wp_reset_postdata(); endforeach; ?> 
+
+</div>
+    
+</div>
     
 </div>
 

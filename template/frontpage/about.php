@@ -4,13 +4,22 @@
        <h2>Об институте</h2>
     <div class="about-menu">
 <ul class="about_nav">
-    <li><a href="/equipment/">Экспериментальная база</a></li>
+<!--    <li><a href="/equipment/">Экспериментальная база</a></li>
     <li><a href="/reached/gift/">Награды</a></li>
     <li><a href="/reached/book/">Книги и монографии</a></li>
     <li><a href="/reached/patents/">Патенты</a></li>
     <li><a href="/srw/">НИР</a></li>
     <li><a href="/category/reports/">Отчеты по публикациям</a></li>
-        <li><a href="/category/purchase/">Отчеты по Закупкам</a></li>
+        <li><a href="/category/purchase/">Отчеты по Закупкам</a></li>-->
+<ul>
+ <?php $kinde = array(  
+		'container' => false,
+		'theme_location'  => 'about', 
+		'items_wrap' => '%3$s'		);  
+wp_nav_menu($kinde);  
+?>
+</ul>        
+        
 </ul> 
   
     </div>   

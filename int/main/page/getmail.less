@@ -16,15 +16,12 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    
 }
 
    
 
 .select_item {
-    
-
-    
+   
 .select_label{
         font-size: 2.2em;
     
@@ -42,6 +39,8 @@
         position: absolute;
         
         left: 0;right: 0;
+        
+        
         width: 100%;
         background-color: #fff;
         padding: 2em;
@@ -50,7 +49,6 @@
         form {
             
             input, select {
-               // display: block;
                 border: 1px solid #ddd;
                 outline: 0;
                 padding: 0.3em;
@@ -74,18 +72,17 @@
     }
     
 
-    input[type=radio] {
-        display: none;
-        }
+    input[type=radio] {display: none;}
+    
     input[type=radio]:checked {
         
         & + .select_label {
             background-color: #fff;
             border-radius: 0.5em 0.5em 0 0;
-        span {
+            span {
                color: #333; 
                border-bottom: 0;
-            }
+               }    
             
            & + .fromblock {
                  display: block;

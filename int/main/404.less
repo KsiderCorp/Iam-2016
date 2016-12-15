@@ -1,0 +1,51 @@
+// main: ../style.less
+
+.page404 {
+    background: #3E3E3E;
+background-image: radial-gradient(at 50% -16%, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.50) 190%);
+background-blend-mode: normal,multiply;
+    
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+    .err_t {
+        font-size: 200px;
+        font-weight: bold;
+        color: #ccc;
+    color: #202020;
+    letter-spacing: .2em;
+    text-shadow: 
+      -1px -1px 1px #111, 
+      2px 2px 1px #363636;
+    }
+    
+    .err_menu {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        
+        a {
+            display: inline-block;
+            color: #111;
+            text-decoration: none;
+            padding:0 1em;
+            &:hover {
+                color: #911;
+            }
+        }
+    }
+    
+}

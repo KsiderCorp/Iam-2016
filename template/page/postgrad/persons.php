@@ -2,7 +2,7 @@
     <div class="block">
         
         <div class="teaschers_head">
-            Преподавательский состав
+            <h2>Преподавательский состав</h2>
         </div>
 <div class="teaschers_list">
 <div class="pure-g" >

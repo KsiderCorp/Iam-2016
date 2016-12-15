@@ -23,9 +23,7 @@ function action_function_metrika(){
   ga("require", "displayfeatures");
   ga("send", "pageview");
 
-</script>';
-
-}
+</script>';}
 
 
 function new_excerpt_length($length) {

@@ -1,0 +1,151 @@
+// main: index.less
+
+.editors_content {
+    width: 50%; margin: 0 auto;
+    font-size: 1.2em;
+}
+
+.the_editors-list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    .editor-block {
+        width: 20%;
+        text-align: center;
+        padding: 2em;
+        
+        .editor-pic {
+            width: 100%;
+            padding-bottom: 100%;
+           .bgc; 
+            background-color: #ddd;
+            position: relative;
+            
+            overflow: hidden;
+            
+            @x:50%;
+            
+            a {
+                text-decoration: none;
+                position: absolute;
+                
+
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+                opacity: 0;
+                
+                line-height: 0;
+                color: #fff;
+                z-index: 2;
+                    i {
+                        line-height: 0;
+                    }
+               }
+            &:before {
+                    position: absolute;
+                    top: 0;bottom: 0;
+                    left: 0;right: 0;
+                    content: ' ';
+                    background-color: #333;
+                    opacity: 0;
+                    z-index: 1;
+                  }
+            
+            
+            &:hover {
+                &:before { opacity: 0.3;}
+                
+                a {
+                    opacity: 1;
+                }
+            }
+            
+            }
+        .editor-name {
+            padding: 1em 0;
+            .upper(1em);
+            text-decoration: none;
+            :nth-child(even){
+             font-weight: bold;
+             margin-left: 0.4em;
+                }
+        }
+        
+        .editor-position {
+            font-family: 'Bad Script', cursive;
+            margin-top: -1em;
+            color: #999;
+        }
+        
+    }
+ 
+    
+    .editor-block {
+        
+.editor-pic {  
+    overflow: hidden;
+  box-shadow: 3px 3px 33px #ddd;
+  border-top-left-radius: 59%;
+  border-top-right-radius: 52%;
+  border-bottom-left-radius: 59%;
+  border-bottom-right-radius: 56%;}      
+  
+        
+&:nth-child(2n) .editor-pic{
+  border-top-left-radius: 62%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 52%;
+  border-bottom-right-radius: 59%;
+            } 
+&:nth-child(3n) .editor-pic{
+ border-top-left-radius: 40%;
+  border-top-right-radius: 69%;
+  border-bottom-left-radius: 55%;
+  border-bottom-right-radius: 46%
+            } 
+&:nth-child(5n) .editor-pic{
+  border-top-left-radius: 50%;
+  border-top-right-radius: 59%;
+  border-bottom-left-radius: 52%;
+  border-bottom-right-radius: 56%;
+            } 
+&:nth-child(7n) .editor-pic{
+  border-top-left-radius: 40%;
+  border-top-right-radius: 69%;
+  border-bottom-left-radius: 55%;
+  border-bottom-right-radius: 46%;
+            } 
+            
+&:nth-child(11n) .editor-pic{
+      border-top-left-radius: 40%;
+  border-top-right-radius: 69%;
+  border-bottom-left-radius: 55%;
+  border-bottom-right-radius: 46%;
+            } 
+        
+    }
+    
+}
+
+.editors_contacts {
+
+    width: 50%; margin: 5% auto;
+    padding: 1.2em;
+    background-color: #fff;
+    box-shadow: 3px 3px 33px #ddd;
+    font-size: 2em;
+    
+    span {
+        display: block;
+        padding: 1em;
+    }
+}

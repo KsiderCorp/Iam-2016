@@ -17,7 +17,7 @@ $.fn.exists = function(callback) {
 $(document).on("click", "a.scrollto, a[href*='#']", function(event){
     	var elementClick = $(this).attr("href")
 		var destination = $(elementClick).offset().top;
-	jQuery("html:not(:animated),body:not(:animated)").animate({	scrollTop: destination
+	jQuery("html:not(:animated),body:not(:animated)").animate({	scrollTop: destination - 30
 		}, 800);
 		return false;
 });

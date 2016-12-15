@@ -41,10 +41,11 @@
      
     a {
         
-/*        margin-right: 2em;
+/*      
+        margin-right: 2em;
         margin-bottom: 2em;
-        
-        padding-left: 2em;*/
+        padding-left: 2em;
+*/
         
         padding: 2em;
         padding-top: 0;
@@ -53,8 +54,8 @@
         
         position: relative;   
         display: block;
-            overflow-x: auto;  
-            overflow-y: hidden;        
+        overflow-x: auto;  
+        overflow-y: hidden;        
         text-decoration: none;
             
         min-height: 80px;
@@ -123,17 +124,26 @@
 
 
 .grd_news-wrap {
+    
+    margin-top: 3rem;
+    
     .grd_stick {
         position: relative;
-        background-color: #333;
+        // background-color: #333;
+       // border: 2px dashed #333;
+      
         text-align: center;
-        
+        box-shadow: 0 0 20px 2px #ddd;
+        background-color: #fff;
         a {
             display: block;
             padding: 1em;
-            font-size: 2em;
+            font-size: 1.4em;
             text-decoration: none;
-            color: #fff;
+            color: #333;
+            &:hover {
+                background-color: #F3F3F3;
+            }
         }
     }
     
@@ -169,4 +179,14 @@
         
     }
        
+}
+
+
+.postdock-teaschers {
+    .teaschers_head {
+        text-align: center;
+    }
+    padding: 2.5% 0;
+    margin-top: 2.5%;
+    background-color: #ddd;
 }

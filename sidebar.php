@@ -1,10 +1,16 @@
 <nav>
     <div class="block">
         <div class="navigation vertical">
-            <div class="logotype"><a href="/">ИПРИМ</a><span>РАН</span></div>
-            <div class="top_menu">
+
+            <div class="logotype">
+            <?php if ( !is_front_page() ) : ?>
+            <a href="/">ИПРИМ</a><span>РАН</span>
+            <?php else : ?>&nbsp;<?php endif ; ?>
+            </div>
+            
+           <div class="top_menu">
                 <ul>
-                    <li><a href="">en</a></li>
+                    <li><a href="/en/">en</a></li>
                     
                     <li>
                     
@@ -28,6 +34,7 @@
                 
                 </ul>
             </div>
+            
         </div>
     </div>
 </nav>
