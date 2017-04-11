@@ -2,10 +2,10 @@
     <div class="block">
         
         <div class="pure-g">
-            <div class="pure-u-2-3">
+            <div class="pure-u-1 pure-u-sm-1 pure-u-md-2-3">
                 
         <div class="header-ras_name">
-             Российская академия наук 
+             <a href="http://fano.gov.ru/ru/about/sub_organizations/?id_4=2045">ФАНО России</a> 
         </div>
                 
            <div class="header-ras_iam">
@@ -31,15 +31,7 @@
         <li><a href="#about" class="scrollto">Об Институте</a></li>
 		<li><a href="#administration" class="scrollto">Администрация</a></li>
      </ul>
-     
-<!--<ul>
-    <li><a href="/education/">Образование</a></li>
-    <li><a href="/postgraduate/">Аспирантура</a></li>
 
-    <li><a href="/mkmk/">Журнал</a></li>
-    <li><a href="/conference/" class="front_conf-banner">Конференции</a></li>    
-    <li><a href="/science/" class="front_conf-banner">Наука</a></li>
-</ul>-->
 <ul>
  <?php $kinde = array(  
 		'container' => false,
@@ -53,7 +45,7 @@ wp_nav_menu($kinde);
                 
             </div>
             
-            <div class="pure-u-1-3">
+            <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3">
                 
 <div class="header-department">
 <?php 

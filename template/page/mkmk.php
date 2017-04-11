@@ -6,7 +6,7 @@ get_header(); ?>
 
 <script language = 'javascript'>
   var delay = 100;
-  setTimeout("document.location.href='http://mkmk.ras.ru'", delay);
+  setTimeout("document.location.href='https://mkmk.ras.ru'", delay);
 </script>
 <style>
     #mkmk {

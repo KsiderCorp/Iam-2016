@@ -13,18 +13,19 @@
     display: -o-flex;
     display: flex;
     
-   // background-color: #ccc;
-   //  background-color: #e0e0e0;
-    
-  
-    
-    
+    flex-wrap: wrap;
+   
     justify-content: space-around;
     justify-content: flex-start;
     align-items: stretch;
     
+    padding-bottom: 5%;
+    
     .slipnews {
-        width: 33.333%;
+        width: 40%;
+      .max(35.5em, {
+          width: 100%;
+      }); 
        
         .cover {
             display: none;
@@ -37,7 +38,7 @@
             z-index: 4;
             
              a {
-                font-size: 1.2em;
+                font-size: 1.4em;
                 text-decoration: none;
                 border-bottom: 1px solid @blue;
                 }
@@ -45,7 +46,10 @@
         
         
     &:first-child {
-         width: 66.666%;
+         width: 60%;
+      .max(35.5em, {
+          width: 100%;
+      });
          display: flex;
          align-items: flex-end;
          justify-content: flex-start;
@@ -54,12 +58,15 @@
         padding-top: 2em;
         .slipcontent {
            color: #fff;
-            a {
+            & .slip_news-content > a {
                 text-decoration: none;
                 color: #fff;
                 font-size: 2.2em;
                 border: 0;
                 font-weight: 700;
+            }
+            p > a {
+                color: #fff;
             }
         }
         
@@ -82,6 +89,13 @@
           
         }
         
+        &:last-child {
+           font-size: 1.2em; 
+            p {
+                line-height: 150%;
+                opacity: 0.5;
+            }
+        }   
       }
     
 }
@@ -99,8 +113,21 @@
     align-items: stretch;
     flex-wrap: wrap;
     
+.max(35.5em, {
+       height: 305px;
+       overflow: hidden;
+      .gradient (#ddd, #eee );
+      });    
+    
     .lineblock_wrap {
         width: 20%;
+        
+.max(35.5em, {
+          width: 90%;
+          margin: 0 auto;  
+          height: 75px;
+          overflow: hidden;
+      });
         
         .lineblock {
             padding: 1em;
@@ -118,7 +145,6 @@
         
         &.allnews {
             width: 100%;
-            
         }
         
     }

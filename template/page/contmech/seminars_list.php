@@ -47,7 +47,7 @@ foreach($cur_terms as $cur_term){
  
 
  <div class="workshop_date">
-     <?php echo $postdate; ?>, <?php echo $autors; ?>   
+     <?php echo $postdate; ?><br> <?php echo $autors; ?>   
  </div> 
  
  <div class="workshop_list-titel">

@@ -175,9 +175,42 @@
 
 .site-map {
     background-color: #fff;
-    padding: 5% 0;
-    width: 90%;
     overflow-y: auto;
+    position: fixed;
+    top: 0;bottom: 0;right: 0;left: 0;
+    z-index: 51;
+    padding: 5% 0;
+    
+    ul.mainmenu {
+        position: relative;
+        margin: 0;padding: 0;
+        columns: 200px 4;
+    & > li {
+         display: inline-block;
+         font-size: 2em;
+         padding: 1em;
+         line-height: 120%;
+       a {
+          text-decoration: none;
+          }
+       & > ul {
+                margin: 0;
+                padding: 1em 0;
+                
+                li {
+                    font-size: 1rem;
+                    display: block;
+                    line-height: 100%;
+                    padding: 0.5em 0;
+                    
+                    ul {
+                        padding-left: 0.5rem;
+                    }
+                }
+            }
+        } 
+    }
+    
 }
 
 

@@ -1,6 +1,7 @@
 <div class="site-map">
+
 <div class="block">
-    <h2>Карта сайта</h2>
+<!--    <h2>Карта сайта</h2>-->
     <div class="site_menu">
 <ul class="mainmenu">	
  <?php $kinde = array(  

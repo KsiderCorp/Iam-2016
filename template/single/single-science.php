@@ -98,7 +98,7 @@ if( has_term( '', 'science_tags', $post->ID ) ){
  <div class="related_posts">
 
 <?php 
-       $gettages = get_the_terms( $post->ID, 'science_tags' );
+    $gettages = get_the_terms( $post->ID, 'science_tags' );
     $tags = array();
     foreach($gettages as $tag){
         $tag_id = $tag->term_id;

@@ -2,9 +2,9 @@
 
 
 .science_banerone {
-   height: 62%;
+  /* height: 62%;*/
    .bgc;
-    
+    padding: 10% 0;
    background-color: #333;
     
 
@@ -30,48 +30,65 @@
             position: relative;
             
             a {
+                
                 color: #fff;
                 text-decoration: none;
-                border-bottom: 1px solid #fff;
-            }
+     //             border-bottom: 1px solid #fff;
+              
+                @bg-color:#f33; 
+                @color:currentColor; 
+                @height:2px; 
+                @distanceFromTop:90%;
+                
+                 display:inline;
+ transition: color .1s ease-out;       
+ border-bottom: none;
+ text-decoration:none;
+ background: linear-gradient(to right, @color 0%, @color 100%);
+ background-repeat: no-repeat;
+ background-size:100% @height;
+ background-position: 0 @distanceFromTop;
+}
             
             .video_link {
                 position: absolute;
                 margin-left: -@ms*3;
                 margin-top: 3rem;
+                @ms:30px;
                 
- @ms:30px;
-                
-a {      display: block;
-         width: 0;height: 0;
-         border-top: @ms solid transparent;
-         border-bottom: @ms solid transparent;
-         border-left: @ms+15 solid @white;
-         position: relative;
-         z-index: 1;
-         transition: all 0.3s;
-         cursor: pointer;
-       &:before {
-            content: '';
-            position: absolute;
-            top: -1.5*@ms;
-            bottom: -1.5*@ms;
-            left: -2.5*@ms; 
-            right: -0.5*@ms;
-                  
-            border-radius: 50%;
-            border: 2px solid  @white;
-            z-index: 2;
-            transition: all 0.3s;
-            }
-       &:after {
-             content: '';
-             opacity: 0;
-             transition: opacity 0.6s;
-             }         
-  &:hover:before, 
-  .play:focus:before {transform: scale(1.1);}
- }
+                    a {
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border-top: @ms solid transparent;
+                        border-bottom: @ms solid transparent;
+                        border-left: @ms+15 solid @white;
+                        position: relative;
+                        z-index: 1;
+                        transition: all 0.3s;
+                        cursor: pointer;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: -1.5*@ms;
+                            bottom: -1.5*@ms;
+                            left: -2.5*@ms;
+                            right: -0.5*@ms;
+                            border-radius: 50%;
+                            border: 2px solid @white;
+                            z-index: 2;
+                            transition: all 0.3s;
+                        }
+                        &:after {
+                            content: '';
+                            opacity: 0;
+                            transition: opacity 0.6s;
+                        }
+                        &:hover:before,
+                        .play:focus:before {
+                            transform: scale(1.1);
+                        }
+                    }
             }
             
          }
@@ -113,7 +130,6 @@ a {      display: block;
 }
 
 
-
 .science_picblock-wrap {
     display: -webkit-flex;
     display: -moz-flex;
@@ -150,7 +166,7 @@ a {      display: block;
             position: relative;
             
             .picblock_titel {
-                font-size: 1.3em;
+                font-size: 1em;
                 padding: 0 0.8em;
 
             } 

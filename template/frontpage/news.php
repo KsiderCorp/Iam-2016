@@ -6,10 +6,10 @@
 
             <div class="pure-u-1">
 
-                <div class="slip_news-block">
+ <div class="slip_news-block">
 
 
-                    <?php
+ <?php
 $do_not_duplicate = array();    
 $sticky = get_option('sticky_posts');
 rsort( $sticky );
@@ -21,8 +21,19 @@ $argst = array(
 'post__in' => $sticky,
 'caller_get_posts' => 1, );
 query_posts($argst );
+ $si = 0;    
 if (have_posts()) :  while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID;
 
+$si++;
+
+ 
+
+     
+?>
+
+<div class="slipnews id<?php the_ID(); ?>">
+       
+<?php if ($si < 2) {     
 $image_url = ''; 
 if( has_post_thumbnail() ):
     $image_id = get_post_thumbnail_id();
@@ -34,20 +45,16 @@ elseif( get_field('postphoto') ):
 
 else : 
     $image_url = 'https://source.unsplash.com/category/technology/500x400'; 
-endif;                    
-?>
-
-<div class="slipnews id<?php the_ID(); ?>">
+endif;?>
        
         <div class="cover id<?php the_ID(); ?>">
             <style>
                 .cover.id<?php the_ID(); ?> {
                     background-image: url(<?php echo $image_url;?>);
-/*background-image: url(https://source.unsplash.com/category/technology/600x500);*/
                 }  
             </style>   
         </div>
-
+<?php  }  ?>
       <div class="slipcontent">
 
         <div class="slip_news-content">
@@ -65,9 +72,8 @@ endif;
 
 
                    
-                   <div class="linenews">
-
-   
+<div class="linenews">
+  
  <?php 
 $tags = array( 
 'posts_per_page' => 10, 
@@ -83,7 +89,7 @@ $tags = array(
     ),
 );
 query_posts($tags);
-if (have_posts()) : while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID;?>
+if (have_posts()) : while (have_posts()) : the_post(); $do_not_duplicate[] = $post->ID; ?>
 
 <div class="lineblock_wrap">
     <div class="lineblock id<?php the_ID(); ?>">

@@ -8,5 +8,6 @@
 <?php include(TEMPLATEPATH . '/template/frontpage/history.php'); ?>
 <?php include(TEMPLATEPATH . '/template/frontpage/bosses.php'); ?>
 
-<?php include(TEMPLATEPATH . '/template/frontpage/partners.php'); ?>	
+<?php include(TEMPLATEPATH . '/template/frontpage/partners.php'); ?>
+<?php // include(TEMPLATEPATH . '/template/sidebar/sitemap.php'); ?>  	
 <?php get_footer(); ?>

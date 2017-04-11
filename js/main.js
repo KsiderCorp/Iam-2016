@@ -98,21 +98,28 @@ $("#filterform input:radio").click(function () {
 
 
 $('.flickr').exists(function() {
-     $('.flickr').each(function ()  {
+  
+    $('.flickr').each(function ()  {
+        
+       
 var apikey= 'd1cffee80470f8d8f649a0e40bfacf28';
 var album= $(this).data('id');
 
 var perpage = $(this).data('count');
 var sz = $(this).data('size');
 var that = $(this);
+
 var extr = 'license,date_upload,date_taken,owner_name,icon_server,original_format,last_update,geo,tags,machine_tags,o_dims,views,media,path_alias,url_sq,url_q,url_t,url_s,url_c,url_m,url_o';
-var apiCall = "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key="+apikey+"&user_id="+album+"&format=json&extras="+extr+"&per_page="+perpage+"&jsoncallback=?";
+var apiCall = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+apikey+"&photoset_id="+album+"&format=json&extras="+extr+"&per_page="+perpage+"&jsoncallback=?";
 
-    $.getJSON(apiCall, function(data){
-
-   that.html('');
-
-    $.each(data.photos.photo, function(i,photo){
+that.html(svgloader); 
+setTimeout(function(){ 
+    
+$.getJSON(apiCall, function(data){
+   
+that.html('');         
+   
+$.each(data.photoset.photo, function(i,photo){
       var img_src = photo['url_'+sz];
       var a_href = photo['url_o'];
       var id = photo['id'];
@@ -120,16 +127,21 @@ var apiCall = "https://api.flickr.com/services/rest/?method=flickr.people.getPho
       var url = 'https://www.flickr.com/photos/'+alias+'/'+id;
 
 that.append('<div class="flickr_img"><a href="'+url+'" class="flickr_image" style="background-image: url('+img_src+');">&nbsp;</a></div>')
-
-
-      });
-    });
-
+       });
+});
+        
+}, 8000);     
+         
+        
+        
   });
+
+    
  });
 
 $('.flickr_shortcode').exists(function() {
      $('.flickr_shortcode').each(function ()  {
+         
 var apikey= 'd1cffee80470f8d8f649a0e40bfacf28';
 var album= $(this).data('id');
 
@@ -153,10 +165,28 @@ $.each(data.photoset.photo, function(i,photo){
 that.append('<div class="flickr_img"><a href="'+url+'" class="flickr_image" style="background-image: url('+img_src+');">&nbsp;</a></div>')
        });
      });
+         
    });
  });
 
+$('.partner_flex').exists(function() {
+   
+ /*   setTimeout(function() {
+    $('.partner_flex .partners_link a').addClass('loadpic');
+    }, 7500);*/
+  
+  $(window).scroll(function() {
+	if (($('.about_wrap').offset().top) <= $(this).scrollTop()) {
+		$('.partner_flex .partners_link a').addClass('loadpic');
+	} else {
+		$('.partner_flex .partners_link a').removeClass('loadpic');
+	}
+});  
 
+}); 
+    
+
+    
 
 // Lightbox
 $("a[href*='.gif'], a[href*='.jpg'], a[href*='.jpeg'], a[href*='.png'], a[href*='.bmp']").magnificPopup({

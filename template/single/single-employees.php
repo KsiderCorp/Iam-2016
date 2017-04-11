@@ -1,4 +1,4 @@
-<div id="container">
+<div id="container" class="single">
 <?php 
 $image = '';
 if( get_field('photo') ):

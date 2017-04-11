@@ -42,6 +42,7 @@ function plugin_settings(){
 	add_settings_field('primer_mail', 'Почта:', 'primer_mail', 'primer_page', 'section_id' );
 	add_settings_field('primer_adress', 'Адрес:', 'primer_adress', 'primer_page', 'section_id' );
 	add_settings_field('primer_requvisites', 'Реквизиты:', 'primer_requvisites', 'primer_page', 'section_id' );
+    add_settings_field('primer_metrika', 'Счетчики:', 'primer_metrika', 'primer_page', 'section_id' );
 }
 
 ## Заполняем опцию 1
@@ -101,6 +102,17 @@ function primer_requvisites(){
         
     echo wp_editor( $val, 'option_requvisites', $settings);    
         
+}
+
+function primer_metrika(){
+	$val = get_option('option_name');
+	$val = $val['metrika']; ?>
+
+<textarea type="text" rows="10" style="width:100%" name="option_name[metrika]" value="<?php echo esc_attr( $val ) ?>" >
+<?php echo esc_attr( $val ) ?>   
+</textarea>
+<a href="https://www.openstat.com/counter/2383622">Openstat</a>	
+<?php
 }
 
 

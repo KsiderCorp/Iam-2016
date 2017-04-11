@@ -22,13 +22,13 @@
                    </li>
                     
   
-                   <li>
-<input type="checkbox" name="" id="sitemap">                    
+                   <li class="hide">
+<input type="checkbox" name="" id="sitemap" >                    
 <label for="sitemap" class="submenu"><i class="icon-grid"></i></label>                
 
    
     <div class="navigation_advance">
-<?php include(TEMPLATEPATH . '/template/sidebar/sitemap.php'); ?>              
+<?php  include(TEMPLATEPATH . '/template/sidebar/sitemap.php'); ?>              
     </div>
                   </li>
                 

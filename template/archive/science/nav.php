@@ -6,15 +6,18 @@ $terms = get_terms( 'science_categories', array('parent' => 0, 'hierarchical' =>
 foreach ( $terms as $term ){    
     $tid =  $term->term_id; 
     $termname = 'science_categories';
-    $image = '';   
+    
+/*    $image = '';   
 if( get_field('photo', 'science_categories_'.$tid) ):
     $attachment_id = get_field('photo', 'science_categories_'.$tid);
     $size = "medium";
     $image = wp_get_attachment_image_src( $attachment_id, $size );
-else : endif;  
+else : endif;  */
+    
     $termname = $term->name;
     $termlink = get_term_link( $term );
-?>
+
+    ?>
 
 <li class="coID i<?php echo $tid;?>">
 <a href="<?php echo $termlink;?>"><span><?php echo $termname;?></span></a>

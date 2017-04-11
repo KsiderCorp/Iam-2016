@@ -11,7 +11,7 @@ require 'function/nav.php';
 function myscript()
 {
 
-wp_enqueue_style( 'naked-style', get_template_directory_uri() . '/style.css', '10000', 'all' );
+wp_enqueue_style( 'naked-style', get_template_directory_uri() . '/style.css', '10000', 'newest' );
 
 wp_deregister_script( 'jquery' );
 wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',false, null, true);
@@ -20,9 +20,9 @@ wp_enqueue_script( 'fontloader', 'https://ajax.googleapis.com/ajax/libs/webfont/
 
 wp_enqueue_script( 'mainscript', get_stylesheet_directory_uri() . '/js/main.js',false, null, true );
 
-if( is_front_page() || is_page('history')|| is_page('education') || is_page_template('template/conference-list.php')  || is_page_template('template/reports.php') ){
+/*if( is_front_page() || is_page('history')|| is_page('education') || is_page_template('template/conference-list.php')  || is_page_template('template/reports.php') ){
 	wp_enqueue_script( 'scrollspy', get_stylesheet_directory_uri() . '/js/scrollspy.js',false, null, true );
-	};
+	};*/
 
 if( !is_front_page() ){
 
@@ -36,6 +36,10 @@ wp_enqueue_style( 'bxstyle', get_template_directory_uri() . '/addon/fotorama/fot
 
 if( is_page('getmail') ){
 wp_enqueue_script( 'username', get_stylesheet_directory_uri() . '/js/username.js',false, null, true );
+};
+    
+if( is_page('en') ){
+    wp_enqueue_style( 'en', get_template_directory_uri() . '/en.css', '', 'all' );
 };
 
 

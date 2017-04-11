@@ -11,7 +11,9 @@
   <li><a href="/mail/">Почта</a></li>    
   <li>&middot;</li> 
   <li><a href="/employees/">Люди</a></li>   
-  <li>&middot;</li> 
+  <li>&middot;</li>   
+<!--  <li><a href="/category/vacancies/">Вакансии</a></li>   
+  <li>&middot;</li> -->
   <li><a href="/requisites/">Реквизиты</a></li>  
 </ul>
  
@@ -20,7 +22,9 @@
   <li>&middot;</li> 
   <li><a href="https://plus.google.com/u/0/b/103876993466338875009/"><i class="icon-social-googleplus"></i></a></li>
   <li>&middot;</li> 
-  <li><a href="https://www.youtube.com/channel/UC5sZXxnq-14Fx8Muyj3NK6A"><i class="icon-youtube-play"></i></a></li>
+  <li><a href="https://www.youtube.com/channel/UC5sZXxnq-14Fx8Muyj3NK6A"><i class="icon-youtube-play"></i></a></li>  
+  <li>&middot;</li> 
+  <li><a href="https://iamras.slack.com/messages"><i class="icon-speech-streamline-talk-user"></i></a></li>
 </ul>
 
 

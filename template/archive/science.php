@@ -1,8 +1,7 @@
-
 <?php 
 $i = 0;
 $args = array(  
-    'posts_per_page' => 10,   
+    'posts_per_page' => 20,   
     );
 query_posts( array_merge( $wp_query->query, $args) );
 if (have_posts()) : while (have_posts()) : the_post();
@@ -41,7 +40,7 @@ if ($i==1 && !is_paged()) { ?>
 <?php include(TEMPLATEPATH . '/template/archive/science/baner_one.php'); ?>
 
 <?php } 
-elseif( $i > 1 && $i < 6 && !is_paged() ){ 
+elseif( $i > 1 && $i < 10 && !is_paged() ){ 
 
 if ($i==2) {
     include(TEMPLATEPATH . '/template/archive/science/nav.php');
@@ -51,7 +50,7 @@ if ($i==2) {
 <?php include(TEMPLATEPATH . '/template/archive/science/line_two.php'); ?>
 
 <?php 
-if ($i==5) {echo '</div></div>';}                          
+if ($i==9) {echo '</div></div>';}                          
 } 
 else { ?>
 

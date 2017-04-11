@@ -107,23 +107,16 @@ endif; ?>
          </div>   
          
 <?php include(TEMPLATEPATH . '/template/page/contmech/headers.php'); ?>         
-<!--         <div class="work_shop-pic">
+<!--<div class="work_shop-pic">
 <style>
     .work_shop-pic { background-image: url('<?php echo $pictofon[0]; ?>');}  
-</style>   
-         </div> -->   
+</style></div> -->   
           
            <div class="workshop_registration">
 <?php // echo do_shortcode( '[contact-form-7 id="1779" title="continuum"]' ); ?>
 <?php  echo do_shortcode( '[contact-form-7 id="2054" title="mech of cont"]' ); ?>
            </div> 
-            
-    
-        
-
-     
-     
-    </div>
+ </div>
         
         
         

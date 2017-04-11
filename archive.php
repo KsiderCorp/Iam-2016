@@ -8,10 +8,10 @@ if( is_category('news') ){
 elseif ( is_category('purchase') ){
     include(TEMPLATEPATH . '/template/archive/purchase.php');// yes
 }
-/*elseif ( is_category('reports') ){
-    include(TEMPLATEPATH . '/template/archive/reports.php');
+elseif ( is_category('vacancies') ){
+    include(TEMPLATEPATH . '/template/archive/vacancies.php');
 }
-elseif ( is_category('vote') ){
+/*elseif ( is_category('vote') ){
     include(TEMPLATEPATH . '/template/archive/vote.php');
 }*/
 elseif ( is_post_type_archive('conference') ) {

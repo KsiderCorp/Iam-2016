@@ -58,3 +58,27 @@
     
     
 }
+
+
+.single_content-block {
+    form {
+        padding: 2em 0;
+        label {
+            display: block;
+        }
+        input {
+            outline: 0;
+            border: 1px solid #ddd;
+            display: block;
+            margin-bottom: 0.5em;
+            padding: 0.5em;
+            &[type=submit] {
+              padding: 0.8em;  
+            }           
+            &[type=file] {
+               border: 0; 
+            }
+        }
+    }
+}
+

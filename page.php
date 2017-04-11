@@ -25,7 +25,7 @@ else { ?>
         <h1><?php the_title(); ?></h1>
     </div>
     
-    <div class="single_wrap">
+<div class="single_wrap">
         
 <div class="single_discription">
 
@@ -97,6 +97,8 @@ if( $rel ): ?>
         
         
     </div>
+</div>
+ 
 </div>
   
 <?php } endwhile; else : ?>
